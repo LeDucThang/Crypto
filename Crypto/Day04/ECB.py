@@ -121,12 +121,12 @@ part_of_cookie = "".join(store)
 print part_of_cookie
 
 print "\nstep 4: cut and paste admin role to cookie to increase privilege"
-print "because 'role=administrator' need 2 blocks, so we must pad 'role=administrator' to fit in 2 blocks"
+print "because 'role=administrator' need 2 blocks, so we must add other character into 'role=administrator' to fit in 2 blocks"
 msg = "a"*43
 msg = msg + "re=06-04-2014&role=administrator"
 
 
-print "\nCreate user with this msg and cut 2 blocks 1 and 2 (32:96)"
+print "\nCreate user with this msg and cut 2 blocks 3 and 5 (96:160)"
 create_user(msg)
 cookie_step4 = login(msg)
 print cookie_step4[32*3:32*5]
