@@ -131,9 +131,9 @@ create_user(msg)
 cookie_step4 = login(msg)
 print cookie_step4[32*3:32*5]
 two_last_block = cookie_step4[32*3:32*5]
-print "\nWe need shift 'a' so that 'role=member' fit in 1 block"
 print len(part_of_cookie)
 
+print "\nWe need shift 'a' so that length of plaintext cookie with 'role=administrator' fit 5 block"
 msg = "a"*38
 create_user(msg)
 cookie = login(msg)
